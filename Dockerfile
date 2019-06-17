@@ -75,13 +75,9 @@ RUN aws s3 cp s3://amazonei-tensorflow/tensorflow/v1.13/ubuntu/latest/tensorflow
 	&& tar xvzf tensorflow-1-13-1-ubuntu-ei-1-1-python36.tar.gz \
 	&& pip3.6 install tensorflow-1-13-1-ubuntu-ei-1-1-python36/*.whl
 
-RUN git clone https://github.com/tensorflow/tensorflow.git
-
-WORKDIR /tensorflow
-
 RUN git clone https://github.com/tensorflow/models.git
 
-WORKDIR /tensorflow/models/research
+WORKDIR /models/research
 
 RUN curl -L -o protobuf.zip https://github.com/google/protobuf/releases/download/v3.0.0/protoc-3.0.0-linux-x86_64.zip \
     && unzip protobuf.zip \
@@ -89,9 +85,9 @@ RUN curl -L -o protobuf.zip https://github.com/google/protobuf/releases/download
 
 RUN echo "export PYTHONPATH=${PYTHONPATH}:`pwd`:`pwd`/slim" >> ~/.bashrc
 
-COPY artifacts/* /tensorflow/models/research/object_detection/
+COPY artifacts/* /models/research/object_detection/
 
-WORKDIR /tensorflow/models/research/object_detection/
+WORKDIR /models/research/object_detection/
 
 RUN wget http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet50_coco_2018_01_28.tar.gz \
 	&& tar xvzf faster_rcnn_resnet50_coco_2018_01_28.tar.gz
