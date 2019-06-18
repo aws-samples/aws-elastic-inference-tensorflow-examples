@@ -4,9 +4,16 @@ AWS Tensorflow Elastic Inference cost analysis blog post code. Notebook measures
 
 Please follow the walkthrough at ___ to run example. 
 
-Currently, this repository uses m5.large, eia.large, EIPredictor, and Faster R-CNN ResNet50 to present the cost and performance benefits of using AWS Elastic Inference with Tensorflow.
+Currently, to present the cost and performance benefits of using AWS Elastic Inference with Tensorflow, this repository uses 
 
+1. M5.large instance
+2. Large EI accelerator
+3. EIPredictor data structure
+4. Faster R-CNN ResNet50 frozen model
 
+At the end of the walkthrough, you should see a short video as below:
+
+[![Annotated Dog Park](https://github.com/aws-samples/aws-elastic-inference-tensorflow-examples/blob/master/annotated_dog_park.gif)](https://github.com/aws-samples/aws-elastic-inference-tensorflow-examples/blob/master/annotated_dog_park.gif)
 
 ## License Summary
 
