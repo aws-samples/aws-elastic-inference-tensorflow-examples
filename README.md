@@ -2,7 +2,7 @@
 
 AWS Tensorflow Elastic Inference cost analysis blog post code. Notebook measures the timing of running object detection on a video locally v. Elastic Inference.
 
-Please follow the walkthrough at ___ to run example. 
+Please follow the walkthrough in this [blog](https://aws.amazon.com/blogs/machine-learning/optimizing-costs-in-amazon-elastic-inference-with-amazon-tensorflow/) to run the example. 
 
 Currently, to present the cost and performance benefits of using AWS Elastic Inference with Tensorflow, this repository uses 
 
